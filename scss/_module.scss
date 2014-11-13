@@ -1,0 +1,52 @@
+/* 
+Module Rules
+    A Module is a more discrete component of the page. It is your navigation bars and your carousels and your dialogs and your widgets and so on. This is the meat of the page. Modules sit inside Layout components. Modules can sometimes sit within other Modules, too. Each Module should be designed to exist as a standalone component. In doing so, the page will be more flexible. If done right, Modules can easily be moved to different parts of the layout without breaking.
+    When defining the rule set for a module, avoid using IDs and element selectors, sticking only to class names. A module will likely contain a number of elements and there is likely to be a desire to use descendent or child selectors to target those elements. 
+*/
+
+header[role="banner"] {
+    background: url('../img/banner-01.jpg') no-repeat center center;
+    background-size: cover;
+    height: 80vh;
+}
+
+.banner-info {
+    color: #fff;
+    text-align: center;
+}
+
+.main-work header,
+.main-about {
+    text-align: center;
+}
+
+.main-work ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-about img {
+    border-radius: 50%;
+    height: auto;
+    width: 10vw;
+    @media only screen and (max-width: $tablet) {
+        width: 35vw;
+    }
+}
+
+.contentinfo-copyright-wrap {
+    background-color: $background-color;
+    color: #fff;
+}
+
+.contentinfo-copyright-wrap {
+    background-color: darken($background-color,10%);
+    color: #fff;
+}
+
+.main-about, .main-work {
+    border-top: 1px solid $background-color;
+    margin-top: 40px;
+    padding-top: 20px;
+}
